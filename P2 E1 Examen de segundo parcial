@@ -1,0 +1,34 @@
+#https://replit.com/join/svppqtvmwy-frida-paulinapa
+
+temperatura = float(input("¿Cuál es tu temperatura corporal en grados celcius? "))
+print(" ")
+dias = int(input("¿Cuántos días llevas enfermo? "))
+print(" ")
+sintomas = input("¿Cuáles son tus sintomas? (tos crónica,tos,fatiga extrema,perdida de peso,dolor de garganta,dificultad para respirar, dolor de cabeza) ")
+print(" ")
+
+if temperatura <= 36.5:
+  print("No tiene fiebre")
+elif temperatura > 36.5 < 37.9:
+  print("Fiebre baja")
+elif temperatura > 38:
+  print("Fiebre alta")
+else:
+  print("Tu temperatura no es correcta, revisar de nuevo")
+
+
+if dias == 7 and sintomas == "tos cronica" or sintomas == "fatiga extrema" or sintomas == "perdida de peso":
+  print("Enfermedad cronica")
+else:
+  print("No tienes ninguna enfermedad cronica")
+
+
+
+if temperatura >= 36 <= 36.6 and sintomas == "tos":
+  print("Infeccion respiratoria leve")
+elif temperatura > 36.6 < 38 and sintomas == "tos" or sintomas == "dolor de garganta":
+  print("Infeccion respiratoria media")
+elif temperatura >= 38 and sintomas == "dificultad para respirar":
+  print("Infeccion respiratoria grave")
+else:
+  print("No tienes ninguna infeccion grave")
